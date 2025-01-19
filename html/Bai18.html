@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai18</title>
+    <link rel="stylesheet" href="../css/alldocu.css" />
+    <style>
+        .tenbai {
+            text-align:center;
+            font-size:45px;
+            margin:0;
+        }
+        p {
+            font-size:25px;
+            margin:0;
+        }
+        .so1 {
+            margin:0;
+            font-size:35px;
+        }
+        img {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            margin : 0 auto;
+        }
+        span {
+            color: aqua;
+        }
+        body {
+            font-size: 1.2rem;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        .tieude {
+            color:purple
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="tenbai">Bài 18: THỰC HÀNH TỔNG HỢP THIẾT KẾ TRANG WEB</div></h1> 
+        <br>
+    </header>
+
+    <div>
+        <img src="../images/m4.gif" alt="" class="goc" />
+        <h3 class="so1">1. DỰ ÁN: XÂY DỰNG WEBSITE GIỚI THIỆU CÁC CÂU LẠC BỘ NGOẠI KHÓA CỦA TRƯỜNG </h3>
+
+        <p> &emsp;&emsp;Website cần một trang chủ và các trang riêng cho từng nhóm hoặc từng câu lạc bộ tùy theo số lượng và thông tin hoạt động chi tiết của các câu lạc bộ. 
+            Ở mức đơn giản, em có thể thiết kế website với ba thành viên trang tương ứng với trang chủ, trang giới thiệu các câu lạc bộ thể thao và các câu lạc bộ nghệ thuật.<br>
+            &emsp;&emsp;Trang chủ sẽ chứa các thông tin chung nhất về các câu lạc bộ và liên kết tới các trang thành viên - ví dụ như trong Hình 18.1. Minh họa có thể tùy chọn vào các tài nguyên sẵn có - 
+            thường là ảnh và video. Các trang thành viên đăng thông tin chi tiết, lịch hoạt động, thành tích,… tùy nhu cầu. Ngoài ra, em có thể tạo thêm một trang chứa biểu mẫu để các bạn đăng ký tham gia.</p>
+
+        <img src="../images/bai18/18.1.png" alt="Ảnh lỗi"><br>
+
+        <p> &emsp;&emsp;Các trang nên tuân theo phong cách trình bày chung bằng cách sử dụng liên kết tới cùng một tệp tin CSS.<br>
+            &emsp;&emsp;Để thực hiện ý tưởng này, trước hết ta cần lên ý tưởng về bố cục của từng phần trong một trang web rồi sử dụng CSS để định dạng 
+            (kích thước, vị trí, màu sắc, cỡ chữ,…) của mỗi phần.</p>   
+        
+        <h3 class="so1">2. THỰC HÀNH </h3>
+        
+        <p> &emsp;&emsp;<span class="tieude"><strong>Nhiệm vụ 1: Tạo tệp CSS</strong></span></p>
+
+        <p> &emsp;&emsp;<span class="tieude"><strong><i>Yêu cầu:</i></strong></span> Tạo tệp CSS để trình bày website như hình 18.2.</p>
+
+        <img src="../images/bai18/18.2.png" alt="Ảnh lỗi"><br>
+
+        <p> &emsp;&emsp;<span class="tieude"><strong><i>Hướng dẫn:</i></strong></span></p>
+
+        <p> &emsp;&emsp;Với bố cục như Hình 18.2, mỗi thành phần (đầu trang, nội dung chính, cuối trang, banner, slogan, ảnh/nội dung) 
+            được định nghĩa bằng một lớp riêng hoặc sử dụng chung lớp nếu cùng định dạng.<br>
+            &emsp;&emsp;Phần đầu trang gồm hai phần nhỏ:<br>
+            &emsp;&emsp;<span>•</span> Banner: Có thể sử dụng một ảnh làm nền và tiêu đề là tiêu đề trang web, cỡ chữ to, màu sắc nổi bật. 
+            Ví dụ, CSS để trang web hiển thị như Hình 18.1 được thiết lập như sau:</p>
+
+        <img src="../images/bai18/1.png" alt="Ảnh lỗi"><br>
+
+        <p> &emsp;&emsp;<span>•</span> Slogan: Trong Hình 18.1, slogan gồm 3 ô trên hàng ngang có định dạng giống nhau, mỗi ô có độ rộng bằng 1/3 độ rộng trang. 
+            Vì các ô giống nhau nên ta chỉ cần tạo một lớp CSS (đặt tên là block_3). Tuy nhiên khi sử dụng thẻ div, các ô này sẽ được xếp theo chiều dọc. 
+            Để hiển thị theo phương ngang, ta sẽ tạo ra một lớp Row có độ rộng bằng độ rộng trang, lớp Row chứa 3 ô trên.<br>
+            &emsp;&emsp;Cách trình bày nhiều ô trong cùng một hàng được sử dụng phổ biến trong các trang web, tạo sự cân đối và hài hòa khi hiển thị. 
+            Trong phần nội dung, cách thiết lập hoàn toàn tương tự, áp dụng cho việc chia hai cột bằng nhau trên mỗi hàng. Do vậy, ta sẽ định nghĩa thêm lớp slogan (Hình 18.3) 
+            và lớp nội dung chính (content) để bao phía ngoài lớp Row. Mỗi lớp có thể có thêm các đặc tính trình bày riêng.</p>
+
+        <img src="../images/bai18/18.3.png" alt="Ảnh lỗi"><br>
+        
+        <p> &emsp;&emsp;Ví dụ CSS cho slogan như Hình 18.3 được thiết lập như sau:</p>
+
+        <img src="../images/bai18/2.png" alt="Ảnh lỗi"><br>
+
+        <p> &emsp;&emsp;Với phần nội dung chính và cuối trang, ta thực hiện việc phân tích bố cục và thiết lập CSS hoàn toàn tương tự.<br>
+            &emsp;&emsp;Sau khi hoàn thành, lưu tệp tin dưới tên <span>style.css</span>.<br>
+            &emsp;&emsp;<span class="tieude"><strong>Nhiệm vụ 2: Tạo các tệp HTML</strong></span><br>
+            &emsp;&emsp;<span class="tieude"><strong><i>Yêu cầu:</i></strong></span> Tạo các tệp html <span>index.html</span>, <span>thethao.html</span> và <span>nghethuat.html</span> để tạo trang web theo phân tích ở Nhiệm vụ 1.<br>
+            &emsp;&emsp;<span class="tieude"><strong><i>Hướng dẫn:</i></strong></span><br>
+            &emsp;&emsp;Để sử dụng các thiết lập CSS từ Nhiệm vụ 1, ta cần tạo các khối bằng thẻ div với các lớp CSS đã tạo. Ví dụ, để tạo khối banner cho trang chủ ta làm như sau:</p>
+
+        <img src="../images/bai18/3.png" alt="Ảnh lỗi"><br>
+
+        <p> &emsp;&emsp;Thực hiện tương tự cho cả ba tệp tin.<br>
+            &emsp;&emsp;Chuẩn bị một số hình ảnh và video các hoạt động tại lớp/trường em để sử dụng trong mỗi trang web.<br>
+            &emsp;&emsp;Tạo các liên kết từ trang chủ đến hai trang còn lại và đặt liên kết tới các trang khác ở phần cuối trang.</p>
+    </div>
+</body>
+</html>

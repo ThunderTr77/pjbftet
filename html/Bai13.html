@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiến thức bài 13</title>
+    <link rel="stylesheet" href="../css/alldocu.css" />
+    <style>
+      :root {
+        --cac_muc: rgb(17, 149, 250);
+        --dac_biet: rgba(234, 83, 83, 0.816);
+      }
+      html {
+        /* padding: 0.5rem 1rem; */
+        font-family: Times, "Times Neww Roman", Tahoma, serif;
+      }
+      body {
+        font-size: 1.2rem;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      header {
+        background: linear-gradient(45deg, #3bb2f3, #85bae5);
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        padding: 2rem 0;
+        color: rgb(0, 0, 0);
+      }
+      .tenmuc {
+        color: var(--cac_muc);
+      }
+      .dacbiet {
+        color: var(--dac_biet);
+      }
+      .dacbiet1 {
+        color: var(--cac_muc);
+      }
+      .dacbiet2 {
+        color: blueviolet;
+        font-weight: bold;
+      }
+      .suyra {
+        font-weight: bold;
+        font-style: italic;
+      }
+      .anh {
+        display: flex;
+        align-items: center;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        background: #007bff;
+        color: white;
+        border-radius: 0.5rem;
+        text-align: center;
+        padding: 0.5rem 0.5rem;
+        transition: transform 0.2s;
+      }
+      a:hover {
+        background: #0056b3;
+        transform: scale(1.05);
+      }
+      span {
+        color: red;
+      }
+
+      img {
+				display: flex;
+				justify-items: center;
+				align-items: center;
+				margin : 0 auto;
+			}
+    </style>
+  </head>
+  <body>
+    <img src="../images/m1.gif" alt="" class="goc" />
+    <header class="header">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</header>
+    <div>
+      <h2 class="tenmuc">1. KHÁI NIỆM MẪU ĐỊNH DẠNG CSS</h2>
+      &emsp;Trong đoạn mã nguồn ở Hình 13.2, các dòng từ 6 đến 10 là một loại
+      ngôn ngữ đặc biệt dùng để thiết lập các mẫu định dạng cho trang web. Các
+      mẫu định dạng này được gọi là Cascading Style Sheet và viết tắt là CSS.<br />
+      <img src="../images/13.3.png" alt="troll troll vn" class="anh" /><br />
+      <span class="suyra"
+        >&emsp;=> CSS là định dạng độc lập với chuẩn HTML, được dùng để thiết
+        lập các mẫu định dạng dùng trong trang.</span
+      ><br />
+      &emsp;Trong Hình 13.3, ba mẫu định dạng tương ứng với ba dòng được ghi
+      trong thẻ <span class="dacbiet">&ltstyle>...&lt/style></span>(trong phần
+      tử head): Mẫu thứ nhất thiết lập màu chữ đỏ cho các phần tử
+      <span class="dacbiet">&lth1></span>.Mẫu thứ hai thiết lập khung viền màu
+      xanh có độ dày 2 pixel (mỗi pixel = 2,54/96 cm) cũng được áp dụng cho các
+      phần tử <span class="dacbiet">&lth1></span>. Mẫu thứ ba thiết lập dòng đầu
+      thụt vào 15 pixel cho tất cả các phần tử <span class="dacbiet">&ltp></span
+      ><br />
+      &emsp;Như vậy CSS có thể hiểu là tập hợp các mẫu định dạng viết độc lập
+      với mã nguồn html của trang web và dùng để định dạng cho các phần tử HTML
+      tương ứng. CSS có cách viết riêng (ngôn ngữ CSS), độc lập với ngôn ngữ
+      HTML. Chỉ cần viết mẫu định dạng một lần và được áp dụng đồng thời cho tất
+      cả các phần tử, ví dụ <span class="dacbiet">&lth1></span> và
+      <span class="dacbiet">&ltp></span> trong tang web trên.<br />
+      <img src="../images/ghinho1.png" alt="troll troll vn" class="anh" /><br />
+    </div>
+    <div>
+      <h2 class="tenmuc">2. CẤU TRÚC CSS</h2>
+      &emsp;Cấu trúc tổng quát của một mẫu định dạng CSS có hai phần:
+      <span class="dacbiet1">bộ chọn</span> (selector) và
+      <span class="dacbiet1">vùng mô</span> tả (declaration block). Vùng mô tả
+      bao gồm một hay nhiều quy định có dạng {<span class="dacbiet"
+        >thuộc tính</span
+      >
+      : <span style="color: rgb(176, 119, 230)">giá trị</span>;}, các quy định
+      được viết cách nhau bởi dấu “;”. Bộ chọn sẽ quy định những thẻ HTML nào
+      được chọn để áp dụng định dạng này.<br />
+      &emsp;Cấu trúc CSS có thể ở dạng đơn giản, trong đó vùng mô tả chỉ có một
+      quy định:<br />
+      <img src="../images/1.png" alt="troll troll vn" class="anh" /><br />
+      &emsp;hoặc nhiều quy định ở vùng mô tả như sau:<br />
+      <img src="../images/2.png" alt="troll troll vn" class="anh" /><br />
+      &emsp;Ví dụ: Mẫu CSS gồm hai quy định, thụt lề dòng đầu và chữ màu xanh áp
+      dụng cho bộ chọn là tất cả các thẻ p.<br />
+      <img src="../images/4.png" alt="troll troll vn" class="anh" /><br />
+      &emsp;Có ba cách thiết lập CSS là
+      <span class="dacbiet1">CSS trong</span> (internal CSS),
+      <span class="dacbiet1">CSS ngoài</span> (external CSS) và
+      <span class="dacbiet1">CSS nội tuyến</span> (inline CSS).<br />
+      <div>
+        <h3 class="tenmuc">&emsp;a) Cách thiết lập CSS trong</h3>
+        &emsp;Cách thiết lập này đưa toàn bộ các mẫu định dạng vào bên trong thẻ
+        <span class="dacbiet">&ltstyle></span> và đặt trong phần tử head của tệp
+        HTML. Với cách thiết lập này các định dạng sẽ áp dụng cho tất cả các
+        phần tử HTML của trang web phù hợp với mô tả bộ chọn của CSS. Với cách
+        thiết lập CSS trong, các mẫu định dạng CSS chỉ được áp dụng cho tệp HTML
+        hiện thời. Cách thiết lập CSS trong ví dụ ở
+        <span class="dacbiet1">Hoạt động 1</span> là thiết lập CSS trong.<br />
+        <h3 class="tenmuc">&emsp;b) Cách thiết lập CSS ngoài</h3>
+        &emsp;Các mẫu định dạng CSS được viết trong một tệp css, bên ngoài tệp
+        HTML. Tệp css này sẽ bao gồm các mẫu định dạng như đã mô tả ở trên, theo
+        ngôn ngữ CSS. Sau đó, cần thực hiện thao tác kết nối, liên kết tệp HTML
+        với tệp định dạng css.<br />
+        &emsp;Tệp <span class="dacbiet1">style.css</span> sau là ví dụ cách
+        thiết lập tệp css ngoài. Các dòng chú thích dưới dạng /*……*/ và có thể
+        trên nhiều dòng.<br />
+        <img src="../images/6.png" alt="troll troll vn" class="anh" /><br />
+        &emsp;Cách kết nối tệp HTML với CSS như sau:<br />
+        <span class="dacbiet2">&emsp;Cách 1: </span>Sử dụng thẻ link đặt trong
+        vùng head của trang web, ví dụ:<br />
+        <img src="../images/7.png" alt="troll troll vn" class="anh" /><br />
+        <span class="dacbiet2">&emsp; Cách 2: </span>Sử dụng lệnh
+        <span class="dacbiet">@import</span> đặt trong phần tử style và nằm
+        trong phần tử head của trang web, ví dụ:<br />
+        <img src="../images/8.png" alt="troll troll vn" class="anh" /><br />
+        &emsp;Một tệp CSS có thể được thiết lập để đồng thời áp dụng cho nhiều
+        trang web, giúp cho việc định dạng nhiều trang web thống nhất và khi cần
+        chỉnh sửa định dạng thì chỉ cần sửa một lần trong tệp định dạng css.<br />
+        <h3 class="tenmuc">&emsp;c) Cách thiết lập CSS nội tuyến</h3>
+        &emsp;Có thể định dạng CSS trực tiếp bên trong thẻ của phần tử HTML bằng
+        cách chỉ ra các thuộc tính và giá trị cho thuộc tính style. Cách làm này
+        mất thời gian nhưng thời gian thực hiện sẽ nhanh. Các lợi ích khác của
+        cách thiết lập CSS nội tuyến sẽ được trình bày trong phần sau.<br />
+      </div>
+      <img src="../images/ghinho2.png" alt="troll troll vn" class="anh" /><br />
+    </div>
+    <div>
+      <h2 class="tenmuc">3. VAI TRÒ, Ý NGHĨA CỦA CSS</h2>
+      &emsp;Nếu không dùng CSS thì khi định dạng nội dung trang web ta phải thực
+      hiện thông qua việc thiết lập các thuộc tính cho từng phần tử HTML. Nếu có
+      nhiều trang web và có nhiều phần tử HTML thì công việc này mất nhiều thời
+      gian và có thể không thống nhất. CSS ra đời để phục vụ việc định dạng nội
+      dung trang web một cách thống nhất, nhanh chóng và thuận tiện.<br />
+      <ul style="list-style-type: disc">
+        <li>
+          CSS sẽ giúp tách việc nhập nội dung trang web bằng thẻ HTML và việc
+          định dạng thành hai công việc độc lập với nhau. Điều này sẽ làm giảm
+          nhẹ công việc nhập nội dung, tăng tính chuyên nghiệp của việc định
+          dạng.
+        </li>
+        <li>
+          Các mẫu định dạng của CSS có thể được viết ngay trong phần head của
+          trang html, chỉ cần viết một lần và áp dụng cho tất cả các phần tử
+          trong bộ chọn. Như vậy, các định dạng này được thiết lập một lần và
+          được dùng nhiều lần.
+        </li>
+        <li>
+          Các mẫu định dạng có thể viết trong tệp CSS ngoài và kết nối vào bất
+          kỳ trang web nào. Tính năng này cho phép định dạng một lần và áp dụng
+          cho nhiều trang web, thậm chí cả một website. Một ý nghĩa khác là nếu
+          một website (hay trang web) cần thay đổi định dạng thì có thể chỉ cần
+          chỉnh sửa một lần.
+        </li>
+      </ul>
+      <img src="../images/ghinho3.png" alt="troll troll vn" class="anh" /><br />
+    </div>
+    <div>
+      <h2>
+        <a
+          href="https://vietjack.com/tin-hoc-12-kn/trac-nghiem-bai-13-khai-niem-vai-tro-cua-css.jsp"
+          target="_blank"
+          >4. LUYỆN TẬP</a
+        >
+      </h2>
+    </div>
+  </body>
+</html>

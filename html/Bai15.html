@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai15</title>
+    <link rel="stylesheet" href="../css/alldocu.css" />
+    <style>
+        .tenbai {
+            text-align:center;
+            font-size:45px;
+            margin:0;
+        }
+        p {
+            font-size:25px;
+            margin:0;
+        }
+        .so1 {
+            margin:0;
+            font-size:35px;
+        }
+        img {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            margin : 0 auto;
+        }
+        span {
+            color: aqua;
+        }
+        body {
+            font-size: 1.2rem;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="tenbai">Bài 15: TẠO MÀU CHO CHỮ VÀ NỀN</div></h1> 
+        <br>
+    </header>
+    <img src="../images/q2.gif" alt="" class="goc" />
+    <div>
+        <h3 class="so1">1.HỆ THỐNG MÀU CỦA CSS <br> &emsp;a.Màu RGB </h3>
+
+        <p> &emsp;&emsp;HTML và CSS hỗ trợ hệ màu theo mẫu RGB (R-red, G-green, B-blue). Mỗi màu là một tổ hợp gồm ba giá trị (r, g, b), 
+            trong đó mỗi giá trị này là số nguyên nằm trong khoảng từ 0 đến 255, tức là một số 8 bit. Tổng số màu cho phép là 28 x 28 x 28 = 224 = 16.777.216 màu.</p>
+
+        <p> &emsp;&emsp;Mỗi giá trị màu được thiết lập bởi một trong các cách sau:</p>
+
+        <p> &emsp;&emsp;<strong>• rgb(x-red, x-green, x-blue)</strong>, trong đó x-red, x-green, x-blue có thể nhận các giá trị độc lập từ 0 đến 255.</p>
+
+        <p> &emsp;&emsp;<strong>• rgb(x-red%, x-green%, x-blue%)</strong>, trong đó các tham số biểu thị phần trăm của 255.</p>
+
+        <p> &emsp;&emsp;<strong>• #rrggbb</strong>, trong đó rr, gg, bb là giá trị trong hệ đếm hexa (hệ đếm cơ số 16).</p>
+
+        <img src="../images/bai15/15.1.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">&emsp;b. Hệ màu HSL</h3>
+
+        <p> &emsp;&emsp;Một hệ màu khác mà HTML và CSS hỗ trợ là HSL (Hue, Saturation, Lightness). H (Hue) là vòng tròn màu với giá trị từ 0 đến 360. 
+            S (Saturation) chỉ độ bão hòa hay độ đậm đặc của màu với giá trị từ 0% đến 100%. Màu sẽ biến mất chỉ còn xám khi độ bão hòa bằng 0%. Ngược lại, 
+            màu sẽ đầy đủ nếu độ bão hòa bằng 100%. L (Lightness) là độ sáng với giá trị từ 0% đến 100%. Với 0% chỉ mức độ sáng thấp nhất, màu đen. Với 100% độ sáng là lớn nhất, màu sẽ trắng. 
+            Như vậy, đặt lightness = 50% để có màu đúng.</p>
+        
+        <img src="../images/bai15/15.2.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">&emsp;c. Các tên màu có sẵn trong CSS</h3>
+
+        <p> &emsp;&emsp;Bên cạnh việc thiết lập màu bằng các hàm rgb() và hsl(), CSS còn thiết lập sẵn các tên màu để dễ dàng cho việc sử dụng. 
+            Phiên bản CSS2 thiết lập tên 16 màu chuẩn. Tên màu không phân biệt chữ hoa chữ thường.<br>
+            &emsp;&emsp;Ví dụ một số tên màu có sẵn: black, gray, white, green, orange, yellow, purple, blue, lime,…<br>
+            &emsp;&emsp;Phiên bản CSS3 đã thiết lập 140 tên màu.</p>
+
+        <img src="../images/bai15/15.3.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;<i>Lưu ý</i>: Các màu xám hay đen trắng có thể được thiết lập theo các cách sau:<br>
+            &emsp;&emsp;<strong>- rgb(x,x,x)</strong> với các tham số rgb bằng nhau.<br>
+            &emsp;&emsp;<strong>- hsl(h,0%,x%)</strong> khi tham số saturation bằng 0%.<br>
+            &emsp;&emsp;Các phần tử HTML của trang web có thể được tô màu bằng các thuộc tính sau:<br>
+            &emsp;&emsp;• Thuộc tính <span>color</span> dùng định dạng màu chữ (màu nổi).<br>
+            &emsp;&emsp;• Thuộc tính <span>background-color</span> dùng để định dạng màu nền.<br>
+            &emsp;&emsp;• Thuộc tính <span>border</span> dùng để định dạng màu khung viền quanh phần tử.<br>
+            &emsp;&emsp;Ví dụ:<br>
+            &emsp;&emsp;• Trong mẫu CSS sau, phần tử <span>h1</span> được định dạng màu chữ, màu nền và màu của khung viền:</p>
+
+        <img src="../images/bai15/1.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;• Trong mẫu CSS sau, định dạng khung viền, màu nền cho phần tử <span>em</span>, định dạng màu chữ cho phần tử <span>p</span>:</p>
+
+        <img src="../images/bai15/2.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Kết quả áp dụng 2 CSS trên có thể như hình 15.3.</p>
+
+        <img src="../images/bai15/3.png" alt="Ảnh lỗi">
+        <img src="../images/bai15/4.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;<i>Lưu ý</i>: Các thuộc tính định dạng màu chữ và màu nền đều có tính kế thừa, riêng thuộc tính border không có tính kế thừa.</p>
+
+        <h3 class="so1">2. Thiết lập bộ chọn là tổ hợp các phần tử có quan hệ</h3>
+
+        <p> &emsp;&emsp;Từ trước đến nay chúng ta chỉ xem xét các mẫu định dạng CSS với bộ chọn là các phần tử độc lập, riêng biệt. Trong hoạt động này, 
+            chúng ta sẽ tìm hiểu các mẫu định dạng với bộ chọn là các phần tử có liên quan đến nhau. Các định dạng này có rất nhiều ứng dụng trên thực tế. 
+            Các định dạng này có thể hiểu là được áp dụng trên các phần tử với điều kiện nhất định.<br>
+            &emsp;&emsp;Bảng 15.1 mô tả chi tiết, ý nghĩa và ví dụ áp dụng cho các trường hợp định dạng CSS có dạng là tổ hợp các phần tử có quan hệ với nhau:</p>
+
+        <img src="../images/bai15/bang 15.1.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Sau đây là một số ví dụ minh họa cho các trường hợp của Bảng 15.1.</p>
+        
+        <h3 class="so1">&emsp;a. Ví dụ minh họa cho trường hợp E F</h3>
+
+        <p> &emsp;&emsp;Với định dạng <span>div p</span> {<span>color</span> : blue;} áp dụng cho trang HTML sau, ta thấy đoạn văn bản đầu tiên là phần tử con của <span>div</span>, 
+            đoạn thứ hai là phần tử con của body, do vậy mẫu định dạng trên chỉ áp dụng cho phần tử <span>p</span> đầu tiên (Hình 15.4).</p>
+
+        <img src="../images/bai15/15.4.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">&emsp;b. Ví dụ minh họa cho trường hợp E > F</h3>
+
+        <p> &emsp;&emsp;Giả sử định dạng <span>p > em</span> {<span>color</span> : red;} áp dụng cho văn bản sau. Trong đoạn văn bản này có hai phần tử <span>em</span>, 
+            nhưng chỉ phần tử em thứ hai là con trực tiếp của <span>p</span>, do đó định dạng trên chỉ áp dụng cho phần tử <span>em</span> thứ hai (Hình 15.5).</p>
+
+        
+        <img src="../images/bai15/15.5.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">&emsp;c. Ví dụ minh họa cho trường hợp E + F</h3>
+
+        <p> &emsp;&emsp;Xác định dạng <span>em + strong</span> {<span>color</span> : red;}. Trong văn bản sau có một phần tử <span>strong</span> liền kề với phần tử <span>em</span> và cả hai đều là con trực tiếp của <span>p</span>, 
+            do đó mẫu định dạng trên sẽ áp dụng cho phần tử <span>strong</span> (Hình 15.6).</p>
+
+        <img src="../images/bai15/15.6.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">&emsp;d. Ví dụ minh họa cho trường hợp E ~ F</h3>
+
+        <p> &emsp;&emsp;Với định dạng <span>em ~ strong</span>{<span>color</span> : red;}, văn bản sau có hai phần tử <span>strong</span> đều nằm phía sau của phần tử <span>em</span>, 
+            do đó mẫu định dạng trên sẽ áp dụng cho cả hai phần tử <span>strong</span> (Hình 15.7).</p>
+
+        <img src="../images/bai15/15.7.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Quan hệ E, F trong các trường hợp trên có thể mô tả như trong các sơ đồ sau:</p>
+
+        <img src="../images/bai15/15.8.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">3. THỰC HÀNH</h3>
+    </div>
+</body>
+</html>

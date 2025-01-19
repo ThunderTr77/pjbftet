@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai16</title>
+    <link rel="stylesheet" href="../css/alldocu.css" />
+    <style>
+        .tenbai {
+            text-align:center;
+            font-size:45px;
+            margin:0;
+        }
+        p {
+            font-size:25px;
+            margin:0;
+        }
+        .so1 {
+            margin:0;
+            font-size:35px;
+        }
+        img {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            margin : 0 auto;
+        }
+        span {
+            color: aqua;
+        }
+        body {
+            font-size: 1.2rem;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="tenbai">Bài 16: ĐỊNH DẠNG KHUNG</div></h1> 
+        <br>
+    </header>
+
+    <div>
+        <img src="../images/m2.gif" alt="" class="goc" />
+        <h3 class="so1">1. PHÂN LOẠI PHẦN TỬ KHỐI VÀ NỘI TUYẾN</h3>
+
+        <p> &emsp;&emsp;Các thẻ (hay phần tử) html được chia làm hai loại, <span>khối</span> (block level) và <span>nội tuyến</span> (inline level).<br>
+            &emsp;&emsp;Các phần tử <span>khối</span> thường bắt đầu từ đầu hàng và kéo dài suốt chiều rộng của trang web. Trong ví dụ ở hình 16.1, dòng chữ Thư Bác Hồ gửi học sinh được thể hiện ở dạng khối.<br>
+            &emsp;&emsp;Các phần tử <span>nội tuyến</span> là các phần tử nhúng bên trong một phần tử khác. Trong ví dụ ở hình 16.1, cụm từ Việt Nam là một phần tử nội tuyến, được nhúng trong phần tử p.<br>
+            &emsp;&emsp;Mặc định các phần tử HTML sẽ thuộc một trong hai loại khối hoặc nội tuyến (Bảng 16.1).</p>
+        
+        <img src="../images/bai16/bang16.1.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Chúng ta có thể thay đổi loại phần tử HTML bằng thuộc tính <span>display</span>. 
+            Các giá trị của thuộc tính này bao gồm <strong>block</strong>, <strong>inline</strong>, <strong>none</strong>. Giá trị none sẽ làm ẩn (không hiển thị) phần tử này trên trang web. 
+            Ví dụ CSS sau sẽ đổi loại phần tử <strong>span</strong> từ dạng mặc định là <strong>inline</strong> sang <strong>block</strong>.</p>
+        
+        <img src="../images/bai16/1.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Kết quả áp dụng mẫu CSS trên được minh họa trong Hình 16.2.</p>
+
+        <img src="../images/bai16/16.2.png" alt="Ảnh lỗi"><br>
+        <img src="../images/bai16/1.1.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">2. THIẾT LẬP ĐỊNH DẠNG KHUNG BẰNG CSS</h3>
+
+        <p> &emsp;&emsp;Trong hoạt động tiếp theo các em sẽ được làm quen với cách định dạng khung, viền cho các phần tử HTML của trang web. Cần phân biệt hai loại phần tử HTML, phần tử khối và phần tử nội tuyến. 
+            Với phần tử dạng khối, các khung được xác định với đầy đủ tính chất, còn với các phần tử nội tuyến thì khung chỉ có thể thiết lập mà không có các thông số chiều cao, chiều rộng.</p>
+
+        <img src="../images/bai16/16.3.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Các thuộc tính liên quan đến khung của một phần tử HTML được mô tả trong Bảng 16.2. Lưu ý các thuộc tính này đều không có tính kế thừa.</p>
+
+        <img src="../images/bai16/bang16.2.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Cho một đoạn mã HTML như sau:</p>
+
+        <img src="../images/bai16/2.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Nếu thiết lập mẫu định dạng như Hình 16.4a cho đoạn mã HTML ở trên thì kết quả nhận được tương tự như Hình 16.4b.</p>
+
+        <img src="../images/bai16/16.4.png" alt="Ảnh lỗi"><br>
+        <img src="../images/bai16/1.2.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">3. MỘT SỐ BỘ CHỌN ĐẶC BIỆT CỦA CSS</h3>
+
+        <h3 class="so1">&emsp;a. Thiết lập bộ chọn là một lớp các phần tử có ý nghĩa gần giống nhau</h3>
+
+        <p> &emsp;&emsp;Trong thực tế, có thể có nhu cầu định dạng cho một nhóm phần tử có cùng ý nghĩa, ví dụ các đoạn văn bản có liên quan đến một sự kiện nào đó hoặc một số đoạn văn bản quan trọng cần nhấn mạnh. 
+            Trong các trường hợp này, thiết lập bộ chọn lớp class cho các phần tử đó để có thể thiết lập định dạng chung. Cấu trúc chung của định dạng CSS liên quan đến lớp:</p>
+        
+        <img src="../images/bai16/3.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Ví dụ một số bộ chọn lớp CSS như sau:</p>
+
+        <img src="../images/bai16/4.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Ví dụ đoạn mã HTML sau được áp dụng mẫu CSS ở ví dụ trên thì đoạn văn bản thứ nhất có chữ màu xanh và in đậm, đoạn văn bản thứ hai có chữ màu đỏ.</p>
+
+        <img src="../images/bai16/5.png" alt="Ảnh lỗi"><br>
+        <img src="../images/bai16/bang16.3.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">&emsp;b. Thiết lập bộ chọn riêng cho từng phần tử riêng biệt có mã định danh id</h3>
+
+        <p> &emsp;&emsp;Chúng ta đã biết cách thiết lập và gắn mã định danh id cho từng phần tử trong tệp HTML. Mỗi phần tử chỉ có một mã định danh id duy nhất trong một trang web. 
+            CSS cho phép thiết lập các mẫu định dạng với các phần tử có id tương ứng như sau:</p>
+        
+        <img src="../images/bai16/6.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;Ví dụ một số mẫu định dạng id như sau:</p>
+
+        <img src="../images/bai16/7.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">&emsp;c. Thiết lập bộ chọn thuộc tính CSS</h3>
+
+        <p> &emsp;&emsp;Một tính chất quan trọng khác của CSS là có thể thiết lập bộ chọn là thuộc tính. Các định dạng này sẽ được thiết lập và áp dụng cho các phần tử nếu được gắn với thuộc tính cụ thể nào đó. 
+            Sau đây là ví dụ định dạng CSS loại này:</p>
+        
+        <img src="../images/bai16/8.png" alt="Ảnh lỗi">
+
+        <p> &emsp;&emsp;<i>Lưu ý</i>: Khi đặt tên cho id và class:<br>
+            &emsp;&emsp;- Tên của id và class phân biệt chữ in hoa, in thường.<br>
+            &emsp;&emsp;- Tên bắt buộc phải có ít nhất một kí tự không là số, không bắt đầu bằng số, không chứa dấu cách và các kí tự đặc biệt khác.<br>
+            &emsp;&emsp;- Một phần tử có thể thuộc nhiều lớp khác nhau. Để khai báo, chúng ta đặt các tên lớp cách nhau bởi dấu cách. 
+            Trong ví dụ sau phần tử p thuộc đồng thời ba lớp là “test”, “more” và “once”.</p>
+
+        <img src="../images/bai16/9.png" alt="Ảnh lỗi"><br>
+        <img src="../images/bai16/10.png" alt="Ảnh lỗi">
+
+        <h3 class="so1">4. THỰC HÀNH</h3>
+    </div>
+</body>
+</html>
